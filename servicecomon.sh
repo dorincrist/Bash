@@ -30,6 +30,8 @@ fi
 
 
 #actions if services is failing
-
+service $SERVICE start
+logger servicemon: $SERVICE restarted
+mail -s "servicecomon: $SERVICE restarted at $( date +%d-%m-%Y %H:%M)" root < .
 
 
